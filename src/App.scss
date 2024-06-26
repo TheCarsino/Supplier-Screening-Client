@@ -1,0 +1,67 @@
+@import "./styles.scss";
+#root {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  min-width: 1320px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper .app-navbar {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  // z-index: 999;
+}
+
+.wrapper .app-component {
+  // position: absolute;
+  // bottom: 0;
+  width: 1320px;
+  height: bottom;
+  padding: 0.75rem;
+}
+
+.login-content {
+  position: absolute;
+  top: 15%;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $my-secondary-dark;
+  box-shadow: $my-shadow-med;
+  background-color: $my-gray-100;
+  border-radius: 0.875rem;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+}
+.login-content .login-header {
+  height: fit-content;
+  width: 100%;
+}
+.login-content .login-header .login-logo {
+  height: 64px;
+  display: flex;
+}
+
+.login-content .login-body {
+  width: 85%;
+  margin-top: 1rem;
+}
+.login-content .login-body .login-footer {
+  padding: 1rem 2.5rem 0 2.5rem;
+  display: flex;
+  justify-content: center;
+}

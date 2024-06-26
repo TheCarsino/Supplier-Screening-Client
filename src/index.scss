@@ -1,0 +1,75 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #232b35;
+  background-color: #f8f9fa;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Color themes
+
+$primary: #384555;
+$secondary: #007cc0;
+$info: #ff9929;
+$success: #28a745;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #a5b0c1;
+$dark: #667892;
+$white: #ffffff;
+
+$body-bg: #e9ecef;
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/_variables";
+
+p {
+  width: 100%;
+  margin-bottom: 0rem !important;
+}
+small {
+  width: 100%;
+  margin-bottom: 0rem !important;
+  font-size: 0.75em !important;
+  line-height: 14.5px !important;
+}
+h1 {
+  margin-bottom: 0rem !important;
+}
+h5 {
+  margin-bottom: 0rem !important;
+}
+h6 {
+  margin-bottom: 0rem !important;
+}
+
+.itemlist-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+input:not([readonly]):not([type="checkbox"]):not([type="radio"]) {
+  background-color: #ffffff !important;
+}
+select:not([readonly]) {
+  background-color: #ffffff !important;
+}
+textarea:not([readonly]) {
+  background-color: #ffffff !important;
+}
+.btn-outline-secondary {
+  --bs-btn-border-color: none !important;
+}
