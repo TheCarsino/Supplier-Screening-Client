@@ -1,0 +1,81 @@
+@import "../../styles.scss";
+
+.iso-main-navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.div-main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $my-primary-color;
+}
+.navbar-main {
+  width: 1320px;
+  height: 52px;
+  padding: 0rem !important;
+  background-color: $my-primary-color;
+  margin: 0.5rem;
+}
+.brand-text {
+  color: $my-orange-400;
+}
+.navbar-logo {
+  padding: 0px;
+}
+.nav-sublinks {
+  height: 52px;
+}
+.nav-sublinks .nav-sublinks-link {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+.nav-sublinks .nav-sub-links-active {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  background-color: $my-primary-light;
+}
+.nav-sublinks .nav-sub-links-underlined {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  border-bottom: 1px solid $my-orange-400;
+}
+
+.div-sub-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $my-primary-light;
+}
+.navbar-sub {
+  width: 1320px;
+  height: 52px;
+  padding: 0rem !important;
+  background-color: $my-primary-light;
+}
+
+.nav-user {
+  height: 52px;
+}
+.nav-user .nav-user-icon {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  color: $my-default-white;
+}
+.dropdown-menu[data-bs-popper] {
+  height: 322px;
+  width: 292px;
+  left: -262px !important;
+  padding: 1rem;
+  background-color: $my-default-white;
+  color: $my-primary-dark;
+}
+
+.user-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}

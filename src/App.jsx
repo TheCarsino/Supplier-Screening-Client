@@ -9,7 +9,7 @@ import { URL_SUPPLIERS } from "./config";
 
 function App() {
   return (
-    <div className="wrapper" id="main">
+    <main className="wrapper" id="main">
       {/*Main components on each page*/}
 
       <Routes>
@@ -25,7 +25,7 @@ function App() {
           }
         />
       </Routes>
-    </div>
+    </main>
   );
 }
 

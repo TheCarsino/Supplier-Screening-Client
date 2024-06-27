@@ -1,0 +1,14 @@
+@import "../../styles.scss";
+
+.app-header {
+  height: 4rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-bottom: 1px solid $my-primary-light;
+}
+
+.app-body {
+  width: 100%;
+}

@@ -5,6 +5,7 @@ import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
 import { useAuth } from "../hooks/AuthProvider";
 import { authenticateUser } from "../services/authentication.services";
+import Spinner from "react-bootstrap/esm/Spinner";
 
 import { useNavigate } from "react-router-dom";
 import "../App.scss";
@@ -13,9 +14,12 @@ import { URL_SUPPLIERS } from "../config";
 const Login = () => {
   const navigate = useNavigate();
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: "",
+  });
   const [isValid, setIsValid] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const { isLoggedIn, userData, login } = useAuth();
 
@@ -27,15 +31,23 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     authenticateUser({
-      usuario: username,
-      contrasena: password,
+      usuario: credentials.username,
+      contrasena: credentials.password,
     }).then((authResp) => {
       if (authResp != null) {
         setIsValid(true);
         login(authResp);
         navigate(`${URL_SUPPLIERS}`);
-      } else setIsValid(false);
+      } else {
+        setCredentials({
+          username: "",
+          password: "",
+        });
+        setIsValid(false);
+      }
+      setIsLoading(false);
     });
   };
 
@@ -44,10 +56,10 @@ const Login = () => {
       <div className="login-header">
         <div className="login-logo">
           <img
-            src="/assets/logo.svg"
+            src="/assets/EY-Screening.svg"
             style={{ width: "100%", height: "100%" }}
             className="d-inline-block align-text-top"
-            alt="ISOIntegrity 37001"
+            alt="EY Screening"
           />
         </div>
         <h4 className="text-primary text-center">
@@ -55,16 +67,12 @@ const Login = () => {
         </h4>
         <br />
         <h5 className="text-primary text-center">
-          Software diseñado para simplificar y fortalecer la gestión antisoborno
-          en organizaciones públicas y privadas.
+          Application for the Entity Screening System for Suppliers.
         </h5>
         <hr />
-        <p className="text-dark text-center" style={{ fontSize: "0.825rem" }}>
-          Basado en la norma ISO 37001, este sistema permite evaluar, controlar
-          y mitigar los riesgos de soborno. ISOIntegrity 37001 ofrece funciones
-          como evaluación de riesgos con indicadores cuantificables, gestión de
-          casos de soborno y divulgación de irregularidades, generación de
-          informes y documentación conforme a estándares ISO.
+        <p className="text-dark text-center">
+          EY Supplier offers comprehensive evaluations from multiple databases
+          for the correct evaluation of high risk level suppliers.
         </p>
       </div>
       <div className="login-body">
@@ -75,8 +83,13 @@ const Login = () => {
               <Form.Control
                 type="text"
                 placeholder="Ingrese usuario"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={credentials.username}
+                onChange={(e) =>
+                  setCredentials({
+                    ...credentials,
+                    username: e.target.value,
+                  })
+                }
               />
             </Form.Group>
           </Row>
@@ -86,8 +99,13 @@ const Login = () => {
               <Form.Control
                 type="password"
                 placeholder="Ingrese contraseña"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={credentials.password}
+                onChange={(e) =>
+                  setCredentials({
+                    ...credentials,
+                    password: e.target.value,
+                  })
+                }
               />
             </Form.Group>
           </Row>
@@ -114,7 +132,24 @@ const Login = () => {
               className="btn-primary"
               type="submit"
             >
-              Iniciar Sesión
+              {!isLoading ? (
+                <p>Iniciar Sesión</p>
+              ) : (
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Spinner
+                    animation="border"
+                    variant="white"
+                    style={{ height: "24px", width: "24px" }}
+                  />
+                </div>
+              )}
             </Button>
           </div>
         </Form>
