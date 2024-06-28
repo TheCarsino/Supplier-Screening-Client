@@ -17,11 +17,11 @@ function NavBar() {
   };
 
   return (
-    <section className="iso-main-navbar">
+    <aside className="iso-main-navbar">
       <div className="div-main-nav">
         <Navbar expand="lg" className="navbar-main">
           <Container fluid>
-            <div className="d-flex align-items-center">
+            <figure className="d-flex align-items-center">
               <Navbar.Brand>
                 <img
                   src="/assets/EY-logo.svg"
@@ -33,25 +33,25 @@ function NavBar() {
               <h4 id="nav-logo" className="brand-text">
                 <b>EY-Screening</b>
               </h4>
-            </div>
+            </figure>
           </Container>
           <Button size="md" onClick={() => handleCloseSesion()}>
-            <div
+            <nav
               className="d-flex align-items-center brand-text"
-              style={{ width: "120px" }}
+              style={{ width: "90px" }}
             >
-              <p>Cerrar Sesión</p>
+              <p>Log Out</p>
               <FontAwesomeIcon
                 icon={faDoorOpen}
                 style={{
                   fontSize: "1rem",
                 }}
               />
-            </div>
+            </nav>
           </Button>
         </Navbar>
       </div>
-    </section>
+    </aside>
   );
 }
 

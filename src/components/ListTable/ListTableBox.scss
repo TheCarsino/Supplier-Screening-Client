@@ -1,0 +1,68 @@
+@import "../../styles.scss";
+
+.list-box {
+  width: 100%;
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: start;
+  align-items: stretch;
+  text-overflow: ellipsis;
+  border-top: 1px solid $my-gray-400;
+  border-bottom: 1px solid $my-gray-400;
+}
+.overflow-x {
+  overflow-x: scroll;
+}
+.overflow-y {
+  overflow-y: scroll;
+}
+
+.list-box .header-box {
+  width: max-content;
+  height: 40px;
+  align-items: center;
+  background-color: $my-secondary-dark;
+  color: $my-default-white;
+}
+
+.list-box .listitem-box {
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.list-box .listitem-box .cell-box {
+  width: max-content;
+  height: 40px;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.override-white {
+  background-color: $my-default-white !important;
+}
+.override-gray {
+  background-color: $my-gray-100 !important;
+}
+.override-success {
+  background-color: $my-status-success !important;
+}
+.override-danger {
+  background-color: $my-status-danger !important;
+}
+.override-warning {
+  background-color: $my-status-warning !important;
+}
+.override-info {
+  background-color: $my-status-info !important;
+}
+.override-disabled {
+  background-color: $my-gray-600 !important;
+}
+.override-noPadding {
+  padding: 0 !important;
+}

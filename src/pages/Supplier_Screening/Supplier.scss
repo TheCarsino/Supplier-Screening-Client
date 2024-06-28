@@ -1,0 +1,66 @@
+@import "../../styles.scss";
+
+.filters-section {
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.filters-section-hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.no-suppliers {
+  width: 100%;
+  height: 120px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid $my-gray-600;
+}
+
+.supplier-header {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0 0.25rem 0;
+}
+.table-supppliers-header {
+  width: fit-content;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-top: 1px solid $my-gray-400;
+  border-bottom: 1px solid $my-gray-400;
+}
+
+.supplier-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.supplier-details .container-form-controls {
+  width: 100%;
+  padding: 1rem 0 1rem 0;
+  border-top: 1px solid $my-gray-400;
+  border-bottom: 1px solid $my-gray-400;
+}
+
+.buttons-group-table {
+  display: flex;
+  margin-top: -0.5rem;
+}
+
+.modal-alert-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

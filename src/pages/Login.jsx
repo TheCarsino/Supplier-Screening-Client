@@ -94,7 +94,7 @@ const Login = () => {
             </Form.Group>
           </Row>
           <Row className="mb-3">
-            <Form.Group as={Col} className="col-md-12" controlId="formUsuario">
+            <Form.Group as={Col} className="col-md-12" controlId="formPassword">
               <Form.Label>Contraseña </Form.Label>
               <Form.Control
                 type="password"

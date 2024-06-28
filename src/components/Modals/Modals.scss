@@ -1,0 +1,74 @@
+@import "../../styles.scss";
+
+.main-popup {
+  width: 100%;
+  background-color: $my-default-white !important;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "header"
+    "body"
+    "footer";
+  padding: 1rem 1.875rem 1rem 1.875rem;
+
+  border-radius: 1rem !important;
+}
+
+.main-popup .popup-header {
+  width: inherit;
+  grid-area: header;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.main-popup .popup-header .modal-title {
+  width: 100%;
+}
+.main-popup .popup-header .modal-header {
+  --bs-modal-header-padding: 0em !important;
+}
+.main-popup .popup-header .popup-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-popup .popup-body {
+  grid-area: body;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.main-popup .popup-body .modal-body {
+  --bs-modal-padding: 0rem !important;
+}
+
+.main-popup .popup-footer {
+  grid-area: footer;
+}
+.main-popup .popup-footer .modal-footer {
+  --bs-modal-padding: 0rem !important;
+  display: flex !important;
+  justify-content: end;
+  gap: 0.5rem;
+  align-items: center;
+  padding-top: 1rem;
+  width: 100%;
+}
+.main-popup .popup-footer .cancel-button {
+  width: auto;
+}
+.main-popup .popup-footer .accept-button {
+  width: auto;
+}
+
+.modal-90w {
+  max-width: 80% !important;
+}
+
+@media screen and (max-width: 1440px) {
+  .modal-90w {
+    max-width: 90% !important;
+  }
+}

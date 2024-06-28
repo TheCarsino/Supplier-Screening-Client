@@ -4,12 +4,12 @@ import "./MainContainer.scss";
 function MainContainer({ title, children }) {
   return (
     <>
-      <div className="app-header">
+      <header className="app-header">
         <h2>
           <b>{title}</b>
         </h2>
-      </div>
-      <div className="app-body">{children}</div>
+      </header>
+      <header className="app-body">{children}</header>
     </>
   );
 }
