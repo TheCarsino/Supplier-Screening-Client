@@ -1,13 +1,12 @@
-import PropTypes from "prop-types";
-import { useEffect, useRef, useState } from "react";
-import { Table, Pagination } from "react-bootstrap";
-import "./ListTableBox.scss";
-import { Form, FormGroup, FormLabel, FormControl } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PropTypes from "prop-types";
+import { useEffect, useRef, useState } from "react";
+import { Form, FormGroup, Pagination, Table } from "react-bootstrap";
+import "./ListTableBox.scss";
 
 function ListTableBox({
   header,

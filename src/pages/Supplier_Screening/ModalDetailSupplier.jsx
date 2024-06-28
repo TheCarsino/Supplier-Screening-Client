@@ -144,6 +144,11 @@ export default function ModalDetailSupplier({ selectedSupplier }) {
                 />
               </Form.Group>
             </Row>
+            <footer>
+              <div className="d-flex justify-content-end text-secondary">
+                Last Modification Date: {selectedSupplier.fechaUltimaEdicion}
+              </div>
+            </footer>
           </div>
         </div>
       )}

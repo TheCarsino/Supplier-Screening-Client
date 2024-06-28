@@ -67,3 +67,13 @@ export const deleteSupplier = async (id) => {
     return error.response.data;
   }
 };
+
+export const getScreeningSuppliers = async (body) => {
+  try {
+    const response = await axios.post(`${baseUrl}/screening`, body);
+    return response.data;
+  } catch (error) {
+    console.error("Error deleting supplier:", error);
+    return error.response.data;
+  }
+};
